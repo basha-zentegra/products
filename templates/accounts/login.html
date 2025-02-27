@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block body %}
+
+
+<div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+    <div class="text-center brd" >
+        <h2 class="text-start" >Login</h2><br>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+       
+        <button style="width: 100%;" class="btn btn-primary" type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="{% url 'signup' %}">Sign Up</a></p>
+    
+    </div>
+</div> 
+{% endblock %} 
